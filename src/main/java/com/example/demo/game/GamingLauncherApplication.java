@@ -1,10 +1,6 @@
-package com.example.demo;
+package com.example.demo.game;
 
-import com.example.demo.game.GameRunner;
-import com.example.demo.game.GamingConsole;
-import com.example.demo.game.PackManGame;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 

@@ -4,7 +4,23 @@
        xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <!-- bean definitions here -->
+    <!-- bean definitions here XML 형식으로 Bean을 설정할 수 있음.-->
 
+    <bean id="name" class="java.lang.String">
+        <constructor-arg value="Ranga"/>
+    </bean>
+
+    <bean id="age" class="java.lang.Integer">
+        <constructor-arg value="35"/>
+    </bean>
+
+<!--    <context:component-scan base-package="com.example.demo.game"/>-->
+<!--    패키지 내 component를 스캔함 이걸 대체하고 싶다면 bean을 생성해야함.-->
+
+    <bean id="game" class="com.example.demo.game.PackManGame"/>
+    <bean id="gameRunner" class="com.example.demo.game.GameRunner">
+        <constructor-arg ref="game"/>
+<!--        생성자 주입-->
+    </bean>
 
 </beans>
